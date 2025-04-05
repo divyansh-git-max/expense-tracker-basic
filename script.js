@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let expense=[]; 
     let totalAmount = calculateExpenseTotal();
 
-    
+    expenseForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = expenseName.value.trim();
+        const amount = expenseAmount.value.trim();
+        
+
+
+    });
+
+    function calculateExpenseTotal() {
+
+    }
+
+
 
 });
