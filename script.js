@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalAmountDisplay = document.getElementById('total-amount');
     
 
-    let expense=[]; 
+    let expenses=[]; 
     let totalAmount = calculateExpenseTotal();
 
     expenseForm.addEventListener('submit', (e) => {
@@ -14,7 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = expenseName.value.trim();
         const amount = expenseAmount.value.trim();
         
-
+        if (name!=="" && !isNaN(amount) && amount>0) {
+            const newExpense = {
+                id: Date.now(),
+                name,
+                amount,
+            }
+            expenses.push(newExpense);
+            
+        }
+ 
 
     });
 
